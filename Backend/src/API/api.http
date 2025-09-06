@@ -1,0 +1,33 @@
+
+###
+GET http://localhost:5000/games
+
+
+###
+GET http://localhost:5000/games/3024ccbb-7428-47c7-8483-4b6d3dd886ac
+
+
+###
+POST http://localhost:5000/games
+Content-Type: application/json
+
+{
+  "name": "",
+  "genre": "strategy",
+  "price": 21,
+  "releaseDate": "2022-11-09"
+}
+
+###
+PUT localhost:5000/games/4fededaf-621c-44dd-99a0-2d9543736d68
+Content-Type: application/json
+
+{
+  "name": "Test",
+  "genre": "strategy",
+  "price": 121,
+  "releaseDate": "2025-11-09"
+}
+
+### 
+DELETE http://localhost:5000/games/315370e4-b8dc-47c3-9207-35ba12e99f6e
