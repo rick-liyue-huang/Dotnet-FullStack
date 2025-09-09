@@ -4,7 +4,7 @@ GET http://localhost:5000/games
 
 
 ###
-GET http://localhost:5000/games/3024ccbb-7428-47c7-8483-4b6d3dd886ac
+GET http://localhost:5000/games/972ae4cd-3372-4ef2-b049-748a53f9f71b
 
 
 ###
@@ -12,22 +12,28 @@ POST http://localhost:5000/games
 Content-Type: application/json
 
 {
-  "name": "",
-  "genre": "strategy",
+  "name": "new game",
+  "genreId": "e5f67890-a1b2-c3d4-e5f6-7890a1b2c3d4",
   "price": 21,
-  "releaseDate": "2022-11-09"
+  "releaseDate": "2022-11-09",
+  "description": "new description"
 }
 
 ###
-PUT localhost:5000/games/4fededaf-621c-44dd-99a0-2d9543736d68
+PUT localhost:5000/games/9acf0ab4-6644-4a79-a4da-17d38539b513
 Content-Type: application/json
 
 {
-  "name": "Test",
-  "genre": "strategy",
+  "name": "Test Updated",
+  "genreId": "e5f67890-a1b2-c3d4-e5f6-7890a1b2c3d4",
   "price": 121,
-  "releaseDate": "2025-11-09"
+  "releaseDate": "2025-11-09",
+  "description": "updated description"
 }
 
 ### 
-DELETE http://localhost:5000/games/315370e4-b8dc-47c3-9207-35ba12e99f6e
+DELETE http://localhost:5000/games/ae1cd0ab-f28e-4240-b32a-401e68731fa0
+
+
+###
+GET localhost:5000/genres
