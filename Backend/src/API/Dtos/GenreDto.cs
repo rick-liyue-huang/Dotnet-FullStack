@@ -1,5 +1,5 @@
 namespace API.Dtos;
 
-public record GenreDto(
-    Guid Id, 
-    string Name);
+// public record GenreDto(
+//     Guid Id, 
+//     string Name);
