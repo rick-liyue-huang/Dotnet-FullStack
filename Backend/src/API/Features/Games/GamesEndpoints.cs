@@ -9,29 +9,29 @@ namespace API.Features.Games;
 
 public static class GamesEndpoints
 {
-    public static void MapGamesEndpoints(this IEndpointRouteBuilder app, GameStoreData data)
+    public static void MapGamesEndpoints(this IEndpointRouteBuilder app)
     {
 
         var group = app.MapGroup("/games");
         // GET /games
         // move to Features/Games/GetGames
-        group.MapGetGames(data);
+        group.MapGetGames();
 
         // GET /games/{id}
         // Move to Features/Games/GetGame
-        group.MapGetGame(data);
+        group.MapGetGame();
 
         // POST /games
         // move to Features/Games/CreateGame
-        group.MapCreateGame(data);
+        group.MapCreateGame();
 
         // PUT /games/{id}
         // move to Features/Games/UpdateGame
-        group.MapUpdateGame(data);
+        group.MapUpdateGame();
 
         // DELETE /games/{id}
         // move to Features/Games/DeleteGame
-        group.MapDeleteGame(data);
+        group.MapDeleteGame();
 
     }   
 }

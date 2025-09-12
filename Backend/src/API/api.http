@@ -4,7 +4,7 @@ GET http://localhost:5000/games
 
 
 ###
-GET http://localhost:5000/games/fe949393-e988-4d94-bbee-4093a533bdfb
+GET http://localhost:5000/games/5053b5bc-a874-44fc-af21-0ef089f12603
 
 
 ###
@@ -20,7 +20,7 @@ Content-Type: application/json
 }
 
 ###
-PUT localhost:5000/games/fe949393-e988-4d94-bbee-4093a533bdfb
+PUT localhost:5000/games/5053b5bc-a874-44fc-af21-0ef089f12603
 Content-Type: application/json
 
 {
@@ -32,7 +32,7 @@ Content-Type: application/json
 }
 
 ### 
-DELETE http://localhost:5000/games/fe949393-e988-4d94-bbee-4093a533bdfb
+DELETE http://localhost:5000/games/5053b5bc-a874-44fc-af21-0ef089f12603
 
 
 ###
