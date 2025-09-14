@@ -14,7 +14,9 @@ public class Game
     [StringLength(500)]
     public required string Description { get; set; }
     
-    public required Genre Genre { get; set; }
+    public Genre? Genre { get; set; }
+
+    public Guid GenreId { get; set; }
     
     [Required]
     [Range(1, 200)]

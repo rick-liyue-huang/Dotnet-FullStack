@@ -22,6 +22,7 @@ public static class CreateGameEndpoint
                 Name = gameDto.Name,
                 Description = gameDto.Description,
                 Genre = genre,
+                GenreId = genre.Id,
                 Price = gameDto.Price,
                 ReleaseDate = gameDto.ReleaseDate
             };

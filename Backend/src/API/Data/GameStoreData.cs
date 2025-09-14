@@ -27,6 +27,7 @@ public class GameStoreData
                 Name = "The Legend of Zelda: Breath of the Wild", 
                 Description = "The Legend of Zelda: Breath of the Wild is a 2022 action-adventure game developed by Nintendo.",
                 Genre = _genres[0], 
+                GenreId = _genres[0].Id,
                 Price = 59.99m, 
                 ReleaseDate = new DateOnly(2017, 3, 3) 
             },
@@ -36,6 +37,7 @@ public class GameStoreData
                 Name = "Red Dead Redemption 2", 
                 Description = "Red Dead Redemption 2 is a 2018 action-adventure game developed by Rockstar North.",
                 Genre = _genres[3], 
+                GenreId = _genres[3].Id,
                 Price = 49.99m, 
                 ReleaseDate = new DateOnly(2018, 10, 26) 
             },
@@ -45,6 +47,7 @@ public class GameStoreData
                 Name = "Elden Ring", 
                 Description = "Elden Ring is a 2018 action-adventure game developed by Rockstar North.",
                 Genre = _genres[2], 
+                GenreId = _genres[2].Id,
                 Price = 59.99m, 
                 ReleaseDate = new DateOnly(2022, 2, 25) 
             },
@@ -54,6 +57,7 @@ public class GameStoreData
                 Name = "Cyberpunk 2077", 
                 Description = "Cyberpunk 2077 is a 2022 action-adventure game developed by CD Projekt Red.",
                 Genre = _genres[1], 
+                GenreId = _genres[1].Id,
                 Price = 49.99m, 
                 ReleaseDate = new DateOnly(2020, 12, 10) 
             },
@@ -63,6 +67,7 @@ public class GameStoreData
                 Name = "God of War Ragnarök", 
                 Description = "this is new game",
                 Genre = _genres[5], 
+                GenreId = _genres[5].Id,
                 Price = 69.99m, 
                 ReleaseDate = new DateOnly(2022, 11, 9) 
             }

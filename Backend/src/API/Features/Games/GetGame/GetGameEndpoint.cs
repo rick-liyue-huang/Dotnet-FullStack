@@ -16,7 +16,7 @@ public static class GetGameEndpoint
                 game.Id, 
                 game.Name, 
                 game.Description, 
-                game.Genre.Id, 
+                game.GenreId, 
                 game.Price, 
                 game.ReleaseDate));
         }).WithName(EndpointNames.GetGame);

@@ -13,7 +13,7 @@ public static class GetGamesEndpoint
                 g.Id,
                 g.Name,
                 g.Description,
-                g.Genre.Name,
+                g.Genre!.Name,
                 g.Price,
                 g.ReleaseDate)));
     }
