@@ -4,7 +4,7 @@ GET http://localhost:5000/games
 
 
 ###
-GET http://localhost:5000/games/5053b5bc-a874-44fc-af21-0ef089f12603
+GET http://localhost:5000/games/D943E344-B8BC-4476-AAE9-D22BC1B66BC3
 
 
 ###
@@ -12,27 +12,27 @@ POST http://localhost:5000/games
 Content-Type: application/json
 
 {
-  "name": "new game",
-  "genreId": "e5f67890-a1b2-c3d4-e5f6-7890a1b2c3d4",
-  "price": 21,
-  "releaseDate": "2022-11-09",
-  "description": "new description"
+  "name": "Second Fight Game",
+  "genreId": "3582AE70-6F10-47B8-9F6C-8E0A4CA06AC2",
+  "price": 121,
+  "releaseDate": "2023-01-19",
+  "description": "second description"
 }
 
 ###
-PUT localhost:5000/games/5053b5bc-a874-44fc-af21-0ef089f12603
+PUT localhost:5000/games/2DBE1AF3-AD05-45D2-81E3-C205C80AF791
 Content-Type: application/json
 
 {
   "name": "Test Updated",
-  "genreId": "e5f67890-a1b2-c3d4-e5f6-7890a1b2c3d4",
+  "genreId": "B77CF43A-DEEE-4160-B4EA-6D04384458DC",
   "price": 121,
   "releaseDate": "2025-11-09",
   "description": "updated description"
 }
 
 ### 
-DELETE http://localhost:5000/games/5053b5bc-a874-44fc-af21-0ef089f12603
+DELETE http://localhost:5000/games/2DBE1AF3-AD05-45D2-81E3-C205C80AF791
 
 
 ###

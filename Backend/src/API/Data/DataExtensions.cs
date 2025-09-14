@@ -1,14 +1,22 @@
+using API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Data;
 
 public static class DataExtensions
 {
+    public static void InitializeDb(this WebApplication app)
+    {
+        app.MigrateDb();
+        app.SeedDb();
+    }
+    
+    
     // Create a service to migrate the database
     // this method will replace the old database update manual method:
     // 1. dotnet ef migrations add InitialCreate (not applied)
     // 2. dotnet ef database update (applied)
-    public static void MigrateDb(this WebApplication app)
+    private static void MigrateDb(this WebApplication app)
     {
         using var scope = app.Services.CreateScope();
         GameStoreContext dbContext = scope
@@ -17,6 +25,29 @@ public static class DataExtensions
         
         dbContext.Database.Migrate();
         
+    }
+
+
+    private static void SeedDb(this WebApplication app)
+    {
+        using var scope = app.Services.CreateScope();
+        GameStoreContext dbContext = scope
+            .ServiceProvider
+            .GetRequiredService<GameStoreContext>();
+
+        if (!dbContext.Genres.Any())
+        {
+            dbContext.Genres.AddRange(
+                new Genre { Name = "Fighting" },
+                new Genre { Name = "Kids and Family" },
+                new Genre { Name = "Racing" },
+                new Genre { Name = "Roleplaying" },
+                new Genre { Name = "Action RPG" },
+                new Genre { Name = "Simulation" },
+                new Genre { Name = "Strategy" });
+            
+            dbContext.SaveChanges();
+        }
     }
 }
 
@@ -29,3 +60,5 @@ public static class DataExtensions
    
    While it does offer features that could indirectly support tasks like data validation and direct SQL execution, its primary purpose is to manage entity objects during runtime, which includes retrieving and saving data to the database.
 */
+
+// https://docs.microsoft.com

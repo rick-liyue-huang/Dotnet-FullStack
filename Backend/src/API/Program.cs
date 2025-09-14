@@ -34,10 +34,11 @@ var app = builder.Build();
 
 // GameStoreData gameStoreData = new();
 
-app.MapGamesEndpoints();
-app.MapGenresEndpoints();
+// No more used in database.
+// app.MapGamesEndpoints();
+// app.MapGenresEndpoints();
 
-app.MigrateDb();
+app.InitializeDb();
 
 app.Run(url: "http://localhost:5000"); // can change the url here
 
